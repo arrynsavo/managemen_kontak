@@ -23,9 +23,9 @@ def menghapus_kontak():
         else:
             i_hapus = int(input("Masukkan nomor yang akan dihapus: "))
 
-            # if i_hapus < 1 or i_hapus > len(kontak):
-            #     print("Nomor yang dimasukkan tidak ada dalam daftar kontak.")
-            #     continue
+            if i_hapus < 1 or i_hapus > len(kontak):
+                print("Nomor yang dimasukkan tidak ada dalam daftar kontak.")
+                return
 
             del kontak[i_hapus - 1]
             print("Kontak berhasil dihapus.")
